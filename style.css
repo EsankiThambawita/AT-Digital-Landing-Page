@@ -1,0 +1,699 @@
+/* -----------------------------UNIVERSAL STYLES----------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+/* -----------------------------HEADER AND NAVBAR----------------------------- */
+.header {
+  background-color: #4f46e5;
+  padding: 26px 0;
+}
+
+.navbar {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+.logo img {
+  height: 49.62px;
+  width: 226px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-right: 0;
+}
+
+.nav-links li {
+  margin-left: 10px;
+}
+
+/* Show HOME by default */
+.nav-links li:nth-child(2) {
+  display: block;
+}
+
+/* Hide HOME on desktop */
+@media (min-width: 769px) {
+  .nav-links li:nth-child(2) {
+    display: none;
+  }
+}
+
+.menu-close-item {
+  display: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  color: #f87236;
+}
+
+.hamburger-menu {
+  display: none;
+}
+
+.hamburger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+
+.hamburger-menu .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #ffffff;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-links.js-mobile-menu {
+  position: static;
+  transform: none;
+  visibility: visible;
+}
+
+/* -----------------------------HERO SECTION----------------------------- */
+.hero-section {
+  /* Desktop: Background Image Setup */
+  background-image: url("Assets/Hero Image.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 700px;
+  position: relative;
+}
+
+/* New Mobile Image Setup (Hidden by Default) */
+.mobile-hero-image {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.hero-content {
+  background: linear-gradient(to right, #1cbddd, #4dca79);
+  padding: 24px 40px 32px 40px;
+  color: white;
+  width: 630px;
+  position: absolute;
+  left: 80px;
+  top: 354px;
+}
+
+.hero-content h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background-color: #f28d35;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #cc5d2c;
+}
+
+/* -----------------------------MAIN CONTENT SECTIONS----------------------------- */
+.content-container {
+  max-width: 1064px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 108px;
+}
+
+.development-section {
+  padding: 40px 0;
+}
+
+.development-icon img {
+  height: 414px;
+  width: 414px;
+}
+
+.development-text,
+.consulting-text {
+  text-align: left;
+  width: 542px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.development-text h2,
+.consulting-text h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 27px;
+  color: #4f46e5;
+}
+
+.development-text p,
+.consulting-text p {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.5;
+}
+
+.btn-secondary {
+  display: inline-block;
+  background-color: #f28d35;
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+  font-size: 14px;
+}
+
+.btn-secondary:hover {
+  background-color: #cc5d2c;
+}
+
+.consulting-section {
+  padding: 40px;
+}
+
+.consulting-section .content-container {
+  justify-content: center;
+}
+
+.consulting-icon img {
+  height: 416px;
+  width: 416px;
+}
+
+/* -----------------------------FAQ SECTION----------------------------- */
+.faq-section {
+  padding: 80px 0;
+  text-align: center;
+}
+
+.faq-section .content-container {
+  max-width: 846px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.faq-section h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 27px;
+  color: #4f46e5;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+
+.faq-item {
+  background-color: #faf8ff;
+  border-radius: 7px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+}
+
+.faq-question {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  color: #27272a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+  padding-bottom: 0;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease;
+}
+
+.faq-item.is-active .faq-question {
+  color: #4f46e5;
+  padding-bottom: 0;
+  border-bottom: 1px solid transparent;
+}
+
+.faq-toggle-icon {
+  font-size: 20px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.is-active .faq-toggle-icon {
+  color: #4f46e5;
+  transform: rotate(180deg);
+}
+
+.faq-answer-container {
+  height: 0;
+  max-width: 798px;
+  overflow: hidden;
+  transition: height 0.4s ease-out;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.faq-answer {
+  text-align: left;
+  text-indent: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: #6f6c90;
+  padding-top: 20px;
+  line-height: 1.5;
+}
+
+/* -----------------------------FOOTER SECTION----------------------------- */
+.main-footer {
+  background-color: #4f46e5;
+  color: #ffffff;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 40px 80px 20px 80px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.footer-col-logo {
+  max-width: 500px;
+  gap: 16px;
+}
+
+.footer-logo-img {
+  width: 226px;
+  height: 49.62px;
+  margin-bottom: 5px;
+}
+
+.footer-mission {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  opacity: 0.8;
+  text-align: left;
+}
+
+.footer-heading {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 21px;
+  margin: 0;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.footer-links a:hover {
+  opacity: 1;
+}
+
+.footer-legal {
+  padding: 20px 0;
+}
+
+.footer-legal::before {
+  content: "";
+  display: block;
+  width: 630px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 auto 10px auto;
+}
+
+.footer-legal-content {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+.legal-links-group {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.legal-separator {
+  color: #ffffff;
+  opacity: 0.8;
+  font-size: 14px;
+  margin: 0 -20px;
+}
+
+.legal-link {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.legal-link:hover {
+  opacity: 1;
+}
+
+/* -----------------------------TABLET STYLES----------------------------- */
+@media (max-width: 1024px) {
+  .content-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .footer-container {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .navbar {
+    padding: 0 40px;
+  }
+  .hero-content {
+    left: 40px;
+    width: 500px;
+  }
+}
+
+/* -----------------------------MOBILE STYLES----------------------------- */
+@media (max-width: 768px) {
+  /* Mobile Header & Navbar Adjustments */
+  .header {
+    padding: 15px 0;
+    position: relative;
+  }
+  .navbar {
+    max-width: 100%;
+    padding: 0 20px;
+    overflow: visible;
+  }
+  .logo img {
+    height: 35px;
+    width: auto;
+  }
+  .hamburger-menu {
+    display: block;
+  }
+  .nav-links.js-mobile-menu {
+    flex-direction: column;
+    text-align: left;
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 320px;
+    background: #fff;
+    z-index: 999;
+    padding: 40px 32px 0 32px;
+    transform: translateX(100%);
+    visibility: hidden;
+    box-shadow: -2px 0 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s;
+  }
+  .nav-links.js-mobile-menu.is-open {
+    transform: translateX(0);
+    visibility: visible;
+  }
+  .nav-links.js-mobile-menu .menu-close-item {
+    display: block;
+    margin: 0;
+    align-self: flex-start;
+  }
+  .menu-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 1001;
+    display: block;
+  }
+  .nav-links li {
+    margin: 28px 0;
+    margin-left: 0;
+  }
+  .nav-links a {
+    color: #000000;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .nav-links a:hover {
+    color: #4f46e5;
+  }
+
+  /* Hero Section Mobile Fix */
+  .hero-section {
+    background-image: none;
+    height: auto;
+    position: static;
+  }
+
+  .mobile-hero-image {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .hero-content {
+    position: static !important;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 15px;
+  }
+
+  .btn-primary {
+    margin-top: 15px;
+  }
+
+  .development-section .content-container,
+  .consulting-section .content-container {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+    max-width: 100%;
+  }
+  .development-section,
+  .consulting-section {
+    padding: 60px 0;
+  }
+  .consulting-section .content-container {
+    flex-direction: column-reverse;
+  }
+  .development-text,
+  .consulting-text {
+    width: 100%;
+    text-align: center;
+  }
+  .development-icon img,
+  .consulting-icon img {
+    max-width: 80%;
+    height: auto;
+  }
+  .btn-secondary {
+    align-self: center;
+  }
+  .development-text h2,
+  .consulting-text h2 {
+    font-size: 24px;
+  }
+  .faq-section {
+    padding: 40px 20px;
+  }
+  .faq-section .content-container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+  .faq-question {
+    text-align: left;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .faq-toggle-icon {
+    margin-left: 15px;
+    margin-top: 0;
+    flex-shrink: 0;
+    font-size: 20px;
+    color: #000000;
+  }
+
+  .faq-item {
+    margin-bottom: 10px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  }
+
+  .faq-answer {
+    font-size: 16px;
+  }
+  .footer-container {
+    flex-direction: column;
+    padding: 40px 20px 40px;
+    gap: 30px;
+  }
+
+  .footer-col {
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .footer-col-logo {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer-mission {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1;
+    opacity: 0.8;
+    text-align: left;
+  }
+
+  .footer-links {
+    align-items: flex-start;
+  }
+
+  .footer-links a:hover {
+    opacity: 1;
+  }
+
+  .footer-legal {
+    padding: 5px 0 20px;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-legal::before {
+    width: 90%;
+    max-width: 400px;
+    margin: 0 auto 20px auto;
+  }
+
+  .footer-legal-content {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .legal-links-group {
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+  }
+
+  .legal-separator {
+    display: block;
+    padding: 0 35px;
+    color: #ffffff;
+    opacity: 0.8;
+  }
+
+  .legal-link {
+    display: inline-block;
+    padding: 0;
+  }
+}
