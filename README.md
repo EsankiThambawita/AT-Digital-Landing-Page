@@ -2,7 +2,7 @@
 
 A complete, pixel-perfect, and fully responsive landing page developed for **AT Digital**.  
 
-View the Project on Netlify -  atdigital-project.netlify.app
+Live Demo: atdigital-project.netlify.app
 ---
 
 ##  Technologies Used  
